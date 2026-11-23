@@ -22,7 +22,7 @@ module tt_um_8bitadder (
       .B(uio_in),
       .cin(1'b0),    // Assuming no carry-in for simplicity
       .O(sum),
-      .cout(cout)
+      .cout()
   );
 
   // Assign the sum to the output
@@ -33,7 +33,7 @@ module tt_um_8bitadder (
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, cout, 1'b0};
+  wire _unused = &{ena, clk, cout, 1'b0};
 
 endmodule
 
