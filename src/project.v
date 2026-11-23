@@ -11,9 +11,6 @@ module tt_um_8bitadder (
     input  wire [7:0] uio_in,   // IOs: Input path
     output wire [7:0] uio_out,  // IOs: Output path
     output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
-    input  wire       ena,      // always 1 when the design is powered, so you can ignore it
-    input  wire       clk,      // clock
-    input  wire       rst_n     // reset_n - low to reset
 );
 
   // Instantiate the rca8 module
@@ -24,7 +21,7 @@ module tt_um_8bitadder (
       .A(ui_in),
       .B(uio_in),
       .cin(1'b0),    // Assuming no carry-in for simplicity
-      .SUM(sum),
+      .O(sum),
       .cout(cout)
   );
 
@@ -62,7 +59,7 @@ endmodule
 module rca8(input wire [7:0] A,
             input wire [7:0] B,
             input wire       cin,
-            output wire [7:0] SUM,
+            output wire [7:0] O,
             output wire      cout);
     wire [7:0] carry;
     
