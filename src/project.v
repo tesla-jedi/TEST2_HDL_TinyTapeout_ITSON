@@ -22,7 +22,7 @@ module tt_um_8bitadder (
       .B(uio_in),
       .cin(1'b0),    // Assuming no carry-in for simplicity
       .O(sum),
-      .cout()
+      .cout(cout)
   );
 
   // Assign the sum to the output
