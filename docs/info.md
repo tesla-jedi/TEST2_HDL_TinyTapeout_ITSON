@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This project its a simple 8 bit adder, it needs the 8bit input and the 8bit IO configured as input in order to make the binary adition
 
 ## How to test
 
-Explain how to use your project
+A and B are the main inputs of the 8 bit adder, O its the output array 
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+add leds on the output array and pull-down switches on each input
